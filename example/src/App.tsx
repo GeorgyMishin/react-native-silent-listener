@@ -2,16 +2,26 @@ import * as React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import SilentListener from 'react-native-silent-listener';
 
+SilentListener?.setCheckInterval(1);
+
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [result, setResult] = React.useState<boolean>(false);
 
   React.useEffect(() => {
-    SilentListener.multiply(3, 7).then(setResult);
+    const onMuteChange = (nextVal: boolean) => {
+      setResult(nextVal);
+    };
+
+    SilentListener?.addEventListener(onMuteChange);
+
+    return () => {
+      SilentListener?.removeEventListener(onMuteChange);
+    };
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>Silent mode: {`${result}`}</Text>
     </View>
   );
 }
