@@ -1,7 +1,7 @@
 {
   "name": "react-native-silent-listener",
   "version": "0.1.0",
-  "description": "Library for listen when user enable or disable silent mode",
+  "description": "listen when user enable or disable silent mode",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
