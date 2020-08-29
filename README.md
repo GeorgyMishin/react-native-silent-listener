@@ -6,16 +6,25 @@ Library for listen when user enable or disable silent mode
 
 ```sh
 npm install react-native-silent-listener
+cd ios && pod install
 ```
 
 ## Usage
 
 ```js
-import SilentListener from "react-native-silent-listener";
+import SilentListener from 'react-native-silent-listener';
 
 // ...
 
-const result = await SilentListener.multiply(3, 7);
+SilentListener.setCheckInterval(2);
+
+const onMuteChange = (nextVal) => {
+  //
+};
+
+SilentListener.addEventListener(onMuteChange);
+SilentListener.removeEventListener(onMuteChange);
+SilentListener.removeAllListeners();
 ```
 
 ## Contributing
