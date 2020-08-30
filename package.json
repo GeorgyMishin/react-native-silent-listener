@@ -32,7 +32,10 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "silent",
+    "react-native-silent-listener",
+    "mute-listener"
   ],
   "repository": "https://github.com/GeorgyMishin/react-native-silent-listener",
   "author": "Georgy Mishin <geomishin@gmail.com> (https://github.com/GeorgyMishin)",
