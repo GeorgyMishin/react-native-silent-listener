@@ -1,6 +1,6 @@
 # react-native-silent-listener
 
-Library for listen when user enable or disable silent mode
+Library for listen when user enable or disable silent mode. It works only on real iOS device
 
 ## Installation
 
